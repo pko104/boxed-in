@@ -1,0 +1,241 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+$boxed-color: #06b8a4;
+$lavender-grey: #e7e9ec;
+
+body{
+  margin: 0px;
+  color: #9d9d9d;
+  font-family: "Kaushan Script", cursive;
+}
+
+#logo{
+  display: block;
+  margin: auto;
+  position: relative;
+  top: -180px;
+}
+
+
+.hex-buttons{
+  width: 140px;
+  float: right;
+  position: relative;
+  right: -25px;
+  top: 15px;
+}
+
+.hex {
+  margin-bottom: 3px;
+}
+
+.left{
+  position: relative;
+  float: left;
+  top:26px;
+  width: 30px;
+}
+
+.right{
+  position: relative;
+  float: right;
+  top:0px;
+  width: 30px;
+  right: 60px;
+}
+
+.hexagon {
+  position: relative;
+  width: 50px;
+  height: 28.87px;
+  background-color: $boxed-color;
+  margin: 26px 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  transform: rotate(90deg);
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 35.36px;
+  height: 35.36px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 7.3223px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.hexagon:before {
+  top: -17.6777px;
+}
+
+.hexagon:after {
+  bottom: -17.6777px;
+}
+
+/*cover up extra shadows*/
+.hexagon span {
+  display: block;
+  position: absolute;
+  top:0px;
+  left: 0;
+  width:50px;
+  height:28.8675px;
+  z-index: 2;
+  background: inherit;
+}
+
+.hexagon:hover{
+  background-color: white;
+}
+
+.hexagon:hover .hex-text{
+  color: $boxed-color;
+}
+
+.hex-text{
+  transform: rotate(-90deg);
+  font-size: 30px;
+  top:-1px;
+  right: -10px;
+  z-index: 3;
+  position: relative;
+  color: white;
+}
+
+.title{
+  float: left;
+  font-size: 40px;
+  padding: 45px 100px;
+}
+
+.title-right{
+  float: right;
+  font-size: 40px;
+  padding: 45px 45px 100px;
+  color:  white;
+}
+
+.row{
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 4px solid $lavender-grey;
+}
+
+.green{
+  background-color: $boxed-color;
+  box-shadow: 0px 0px 5px $lavender-grey;
+}
+
+.pop-up{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    display: block;
+    float: left;
+    margin-top: 40px;
+    margin-left: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding:15px;
+
+}
+
+#bounce{
+  -webkit-animation-delay: 1.5s;
+}
+
+#rubberband{
+  -webkit-animation-delay: 1s;
+}
+
+#swivel{
+  -webkit-animation-delay: .5s;
+}
+
+.circle-image{
+  width: 100%;
+  margin:auto;
+  display: block;
+  position: relative;
+  top: 10px;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+  margin-left: 40px;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+.back .pop-up{
+  background-color: #059b89;
+  box-shadow: inset 2px 2px 4px #555;
+  color: white;
+}
+
+.pop-up h3{
+  font-size: 13px;
+  font-family: sofia-pro,sans-serif;
+  text-align: center;
+}
+
+.circle-text{
+  position: absolute;
+  margin: auto;
+  display: block;
+  bottom: 15px;
+  left: 50px;
+  font-size: 30px;
+}
+
+.circle-text:hover{
+  color: $boxed-color;
+}
