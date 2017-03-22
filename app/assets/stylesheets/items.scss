@@ -26,7 +26,7 @@ body{
   float: right;
   position: relative;
   right: -25px;
-  top: 15px;
+  top: 5px;
 }
 
 .hex {
@@ -125,7 +125,7 @@ body{
 }
 
 .row{
-  height: 200px;
+  min-height: 200px;
   overflow: hidden;
   border-bottom: 4px solid $lavender-grey;
 }
@@ -147,7 +147,7 @@ body{
     border-radius: 50%;
     overflow: hidden;
     padding:15px;
-
+    box-shadow: 2px 2px 4px #555;
 }
 
 #bounce{
@@ -216,10 +216,12 @@ body{
 }
 
 .back .pop-up{
-  background-color: #059b89;
+  background-color: #f0f0f6;
   box-shadow: inset 2px 2px 4px #555;
-  color: white;
+  color: $boxed-color;
 }
+
+
 
 .pop-up h3{
   font-size: 13px;
@@ -237,5 +239,116 @@ body{
 }
 
 .circle-text:hover{
-  color: $boxed-color;
+  color: white;
+}
+
+.products {
+    width: 890px;
+    float: left;
+    display: table;
+}
+
+.products h2 {
+    text-transform: uppercase;
+}
+
+.products ul {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.products li {
+    list-style-type: none;
+    min-height: 340px;
+    width: 30%;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    float: left;
+    cursor: pointer;
+}
+
+.products .flipper{
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.products li:hover .flipper, .products li.hover .flipper{
+  transform: rotateY(180deg);
+}
+
+.products .front{
+  background: #eee;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.products .back{
+  background-color: #eee;
+  transform: rotateY(180deg);
+  margin: 0;
+}
+
+.products .front, .products .back{
+  backface-visibility: hidden;
+  position: absolute;
+  width: 270px;
+  min-height: 340px;
+  padding: 0px;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 3px 0px #888;
+  border-radius: 5%;
+}
+
+.products .center{
+  font-size: 50px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  padding: 125px 0px;
+}
+
+.products .fa{
+  padding: 10px;
+}
+
+.fa-shopping-cart:hover{
+  color: #79ec6a;
+}
+
+.fa-heart:hover{
+  color: #df8abd;
+}
+
+.back:hover .fa-heart, .back.hover .fa-heart{
+  border-color: 1px solid #df8abd;
+}
+
+.products img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5% 5% 0% 0%;
+}
+
+.products .text {
+    display: inline-block;
+    padding: 15px 15px;
+    width: 90%;
+    font-size: 13px;
+}
+
+.product-title {
+    display: block;
+    font-weight: 900;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.product-price {
+    display: block;
+    font-size: 12px;
+    font-weight: 900;
+    padding-top: 5px;
 }

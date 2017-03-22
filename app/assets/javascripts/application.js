@@ -11,12 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require_tree .
 
 
-// $( document ).ready(function() {
+$( document ).ready(function() {
 
 
 // $('#bounce').mouseenter( function(){
@@ -44,6 +44,26 @@
 // });
 
 
-// });
+
+$('.item').draggable({
+    revert:true,
+    proxy:'clone',
+    onStartDrag:function(){
+        $(this).draggable('options').cursor = 'not-allowed';
+        $(this).draggable('proxy').css('z-index',10);
+    },
+    onStopDrag:function(){
+        $(this).draggable('options').cursor='move';
+    }
+});
+
+
+
+
+
+});
+
+
+
 
 
