@@ -242,10 +242,21 @@ body{
   color: white;
 }
 
+.the-box{
+  font-size: 50px;
+  float: left;
+  position: relative;
+  clear:left;
+  left: 150px;
+  color: $boxed-color;
+}
+
 .products {
     width: 890px;
-    float: left;
+    float: right;
+    right: 100px;
     display: table;
+    position: relative;
 }
 
 .products h2 {
@@ -287,6 +298,9 @@ body{
   background-color: #eee;
   transform: rotateY(180deg);
   margin: 0;
+  h3{
+    font-size: 20px;
+  }
 }
 
 .products .front, .products .back{
@@ -351,4 +365,38 @@ body{
     font-size: 12px;
     font-weight: 900;
     padding-top: 5px;
+}
+
+ #outbox {
+    position: absolute;
+    margin-top: 500px;
+    left:70px;
+    width: 400px;
+    min-height: 18em;
+    padding: 1%;
+    padding-bottom: 50px;
+}
+#outbox h4 {
+    line-height: 16px;
+    margin: 0 0 0.4em;
+  }
+#outbox h4 .ui-icon {
+  float: left;
+}
+
+.ui-droppable-hover{
+  color: $lavender-grey;
+}
+
+.outbox-footer{
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.outbox-footer span{
+  float:right;
+  position: relative;
+  right: 50px;
+
 }

@@ -80,19 +80,23 @@
         </div>
     </div>
 
-
-
-
-
 </div>
 </div>
 
 <div class='row'>
-    <h1 class='title'>AJAX sorting with Masonry</h1>
+    <h1 class='title'>Draggable items into Shopping Cart</h1>
+
+    <div class='the-box cart'>
+        <i class="fa fa-dropbox fa-5x" aria-hidden="true"></i>
+    </div>
+
+    <div id="outbox" class="ui-widget-content">
+      <h4 class="ui-widget-header"><span class="ui-icon ui-icon-cart"></span>Cart</h4>
+      <h4 class="outbox-footer">Total: <span class='total'>0.0</span></h4>
+    </div>
+
+
     <div class='products'>
-    <button id="pokeBallButton" type="button" data-toggle="modal" data-target="#myModal">
-      <div id="pokeBall"></div>
-    </button>
         <ul>
             <li id="prod1" class='item animated fadeInUp animate1' ontouchstart="this.classList.toggle('hover');">
               <div class='flipper'>
@@ -101,194 +105,194 @@
                 <div class='text'>
                     <span class="product-title">Sun Chips</span>
                     <span class="product-description">Multigrain Chips Variety Pack * 30 x 1.5 oz</span>
-                    <span class="product-price">$11.99 * Save 29%</span>
+                    <span class="product-price">$11.99</span>
                 </div>
               </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
 
-            <li id="prod2" class='animated fadeInUp animate2'>
+            <li id="prod2" class='item animated fadeInUp animate2'>
               <div class='flipper'>
                <div class='front'>
                   <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1422216588699.jpg" alt="glad">
                   <div class ='text'>
                       <span class="product-title">Glad</span>
                       <span class="product-description">ForceFlex 13 Gallon Tall Kitchen * 140 Count</span>
-                      <span class="product-price">$17.99 * Save 32%</span>
+                      <span class="product-price">$17.99</span>
                   </div>
                 </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
-            <li id="prod3" class='animated fadeInUp animate3'>
+            <li id="prod3" class='item animated fadeInUp animate3'>
               <div class='flipper'>
                <div class='front'>
-                  <img src="https://i.imgsafe.org/1421c7aae2.png" alt="Women's Gray Hooded Sweatshirt">
+                  <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1486839799881.jpg" alt="pupr">
                   <div class='text'>
-                      <span class="product-title">Bounty</span>
-                      <span class="product-description">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sitipsum dolor sit amet. Lorem ipsum dolor sit amet.</span>
-                      <span class="product-price">$35.00</span>
+                      <span class="product-title">Pup-Peroni</span>
+                      <span class="product-description">Original Beef Flavor * 40 oz</span>
+                      <span class="product-price">$14.99</span>
                   </div>
                </div>
                <div class ='back'>
                  <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                </div>
               </div>
             </li>
-            <li id="prod4"class='animated fadeInUp animate4' >
+            <li id="prod4" class='item animated fadeInUp animate4' >
               <div class='flipper'>
                <div class='front'>
-                <img src="https://i.imgsafe.org/14240b9f18.png" alt="Men's Athletic Compression Top">
+                <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1458938361553.jpg" alt="soap">
                 <div class='text'>
-                    <span class="product-title">Men's Athletic Compression Top</span>
-                    <span class="product-description">Lorem ipsum dolor sit amet.</span>
-                    <span class="product-price">$45.00</span>
+                    <span class="product-title">Prince $ Spring Liquid Hand Soap</span>
+                    <span class="product-description">Multipack * 4 x 7.5oz</span>
+                    <span class="product-price">$4.99</span>
                 </div>
                 </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
-            <li id="prod5" class='animated fadeInUp animate1' >
+            <li id="prod5" class='item animated fadeInUp animate1' >
               <div class='flipper'>
                <div class='front'>
-                <img src="https://i.imgsafe.org/14f6c3d696.png" alt="Men's Olive Chinos">
+                <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1456296046802.jpg" alt="Bounty">
                 <div class='text'>
-                    <span class="product-title">Men's Olive Chinos</span>
-                    <span class="product-description">Lorem ipsum dolor sit amet.</span>
-                    <span class="product-price">$45.00</span>
+                    <span class="product-title">Bounty White Paper Towels</span>
+                    <span class="product-description">Select-a-Size * 12 Count</span>
+                    <span class="product-price">$18.99</span>
                 </div>
                 </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
-            <li id="prod6" class='animated fadeInUp animate2' >
+            <li id="prod6" class='item animated fadeInUp animate2' >
               <div class='flipper'>
                <div class='front'>
-                <img src="https://i.imgsafe.org/210b60d480.png" alt="Women's Distressed Jeans">
+                <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1443325746879.jpg" alt="Cheez-it">
                 <div class='text'>
-                    <span class="product-title">Women's Distressed Jeans</span>
-                    <span class="product-description">Lorem ipsum dolor sit amet, sed lectus sagittis est congue, eu adipiscing amet libero. Luctus enim ante massa felis amet ac, omnis integer, aliquam viverra amet ornare sed, sed voluptate placerat enim tellus elit.</span>
-                    <span class="product-price">$50.00</span>
+                    <span class="product-title">Cheez-It Baked Snack Crackers</span>
+                    <span class="product-description">45 Count</span>
+                    <span class="product-price">$11.99</span>
                 </div>
                 </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
-            <li id="prod7" class='animated fadeInUp animate3'>
+            <li id="prod7" class='item animated fadeInUp animate3'>
               <div class='flipper'>
                <div class='front'>
-                <img src="https://i.imgsafe.org/14f86a5ef4.png" alt="Women's Skinny Mid Tone Jeans">
+                <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1464622860524.jpg" alt="annie">
                 <div class='text'>
-                    <span class="product-title">Women's Skinny Mid Tone Jeans</span>
-                    <span class="product-description">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</span>
-                    <span class="product-price">$40.00</span>
+                    <span class="product-title">Annie's Organic Fruit Snacks</span>
+                    <span class="product-description">Variety Pack * 42 Count</span>
+                    <span class="product-price">$15.99</span>
                 </div>
                 </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
-            <li id="prod8"class='animated fadeInUp animate1' >
+            <li id="prod8" class='item animated fadeInUp animate1' >
               <div class='flipper'>
                <div class='front'>
-                <img src="https://i.imgsafe.org/1508f24253.png" alt="Leather Book Bag">
+                <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1443326055572.jpg" alt="Cascade">
                 <div class='text'>
-                    <span class="product-title">Leather Book Bag</span>
-                    <span class="product-description">Lorem ipsum dolor sit amet.</span>
-                    <span class="product-price">$55.00</span>
+                    <span class="product-title">Cascade Action Pacs</span>
+                    <span class="product-description">Dawn Grease-Fighter 85 Count</span>
+                    <span class="product-price">$13.99</span>
                 </div>
                 </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
-            <li id="prod9" class='animated fadeInUp animate2'>
+            <li id="prod9" class='item animated fadeInUp animate2'>
               <div class='flipper'>
                 <div class='front'>
-                  <img src="https://i.imgsafe.org/1508dc9fb3.png" alt="Laptop Bag">
+                  <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1470353104132.jpg" alt="Chewy">
                   <div class='text'>
-                      <span class="product-title">Laptop Bag</span>
-                      <span class="product-description">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</span>
-                      <span class="product-price">$40.00</span>
+                      <span class="product-title">Quaker Chewy Bars</span>
+                      <span class="product-description">Variety Pack * 58 Count</span>
+                      <span class="product-price">$11.99</span>
                   </div>
                 </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
-            <li id="prod10"class='animated fadeInUp animate3' >
+            <li id="prod10" class='item animated fadeInUp animate3' >
               <div class='flipper'>
                <div class='front'>
-                  <img src="https://i.imgsafe.org/1508d3b63e.png" alt="Five Panel Hat">
+                  <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1472052883255.jpg" alt="animal">
                   <div class='text'>
-                      <span class="product-title">Five Panel Hat</span>
-                      <span class="product-description">Lorem ipsum dolor sit amet, sed lectus sagittis est congue, eu adipiscing amet libero. Luctus enim ante massa felis amet ac, omnis integer, aliquam viverra amet ornare sed, sed voluptate placerat enim tellus elit.</span>
-                      <span class="product-price">$30.00</span>
+                      <span class="product-title">Stauffer's Animal Crackers</span>
+                      <span class="product-description">Original * 46 oz</span>
+                      <span class="product-price">$6.99</span>
                   </div>
                 </div>
                 <div class ='back'>
                   <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                 </div>
               </div>
             </li>
-            <li id="prod11" class='animated fadeInUp animate4'>
+            <li id="prod11" class='item animated fadeInUp animate4'>
               <div class='flipper'>
                <div class='front'>
-                  <img src="https://i.imgsafe.org/1508c85d59.png" alt="Apple Watch">
+                  <img src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1446587373139.jpg" alt="krispies">
                   <div class='text'>
-                      <span class="product-title">Apple Watch</span>
-                      <span class="product-description">Lorem ipsum dolor sit amet.</span>
-                      <span class="product-price">$199.99</span>
+                      <span class="product-title">Kellogg's Rice Krispies Treats</span>
+                      <span class="product-description">54 Count</span>
+                      <span class="product-price">$11.99</span>
                   </div>
                </div>
                <div class ='back'>
                  <div class ='center'>
+                    <h3>Drag Me to the Box</h3>
                     <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-heart"></i>
                   </div>
                </div>
               </div>

@@ -45,19 +45,24 @@ $( document ).ready(function() {
 
 
 
-$('.item').draggable({
-    revert:true,
-    proxy:'clone',
-    onStartDrag:function(){
-        $(this).draggable('options').cursor = 'not-allowed';
-        $(this).draggable('proxy').css('z-index',10);
-    },
-    onStopDrag:function(){
-        $(this).draggable('options').cursor='move';
-    }
+
+$('.item').draggable({revert: true});
+
+$('.cart').droppable({
+  classes: {"ui-droppable-active": "custom-state-active"},
+  drop: function( event, ui ) {
+      var price = $(ui.draggable).find('.product-price').html();
+      var title = $(ui.draggable).find('.product-title').html();
+
+      $("<li>" + title + " - " + price  + "</li>").appendTo('#outbox');
+
+      var total_price = parseFloat(price.replace('$','')) + parseFloat( $('#outbox .total').html());
+
+      $('#outbox .total').html( total_price.toFixed(2) );
+
+  }
+
 });
-
-
 
 
 
