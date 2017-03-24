@@ -17,9 +17,16 @@ body{
   display: block;
   margin: auto;
   position: relative;
-  top: -180px;
+  top: -150px;
 }
 
+body > .row{
+  height: 150px;
+}
+
+body > .row ~ .row {
+  height: auto;
+}
 
 .hex-buttons{
   width: 140px;
@@ -221,8 +228,6 @@ body{
   color: $boxed-color;
 }
 
-
-
 .pop-up h3{
   font-size: 13px;
   font-family: sofia-pro,sans-serif;
@@ -253,8 +258,8 @@ body{
 
 .products {
     width: 890px;
-    float: right;
-    right: 100px;
+    float: left;
+    left: 300px;
     display: table;
     position: relative;
 }
