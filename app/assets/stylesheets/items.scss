@@ -257,11 +257,11 @@ body > .row ~ .row {
 }
 
 .products {
-    width: 890px;
-    float: left;
-    left: 300px;
-    display: table;
-    position: relative;
+  width: 650px;
+  float: left;
+  left: 30%;
+  display: table;
+  position: relative;
 }
 
 .products h2 {
@@ -269,24 +269,25 @@ body > .row ~ .row {
 }
 
 .products ul {
-    width: 100%;
-    margin: 10px 0;
+  width: 100%;
+  margin: 10px 0;
 }
 
 .products li {
-    list-style-type: none;
-    min-height: 340px;
-    width: 30%;
-    margin: 10px 10px;
-    box-sizing: border-box;
-    float: left;
-    cursor: pointer;
+  list-style-type: none;
+  min-height: 300px;
+  width: 30%;
+  margin: 10px 10px;
+  box-sizing: border-box;
+  float: left;
+  cursor: pointer;
 }
 
 .products .flipper{
-    position: relative;
-    transition: 0.6s;
-    transform-style: preserve-3d;
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  width: 200px;
 }
 
 .products li:hover .flipper, .products li.hover .flipper{
@@ -308,11 +309,12 @@ body > .row ~ .row {
   }
 }
 
+
 .products .front, .products .back{
   backface-visibility: hidden;
   position: absolute;
-  width: 270px;
-  min-height: 340px;
+  width: 200px;
+  min-height: 300px;
   padding: 0px;
   top: 0;
   left: 0;
@@ -325,7 +327,7 @@ body > .row ~ .row {
   position: relative;
   margin: 0 auto;
   text-align: center;
-  padding: 125px 0px;
+  padding: 70px 0px;
 }
 
 .products .fa{
@@ -334,10 +336,6 @@ body > .row ~ .row {
 
 .fa-shopping-cart:hover{
   color: #79ec6a;
-}
-
-.fa-heart:hover{
-  color: #df8abd;
 }
 
 .back:hover .fa-heart, .back.hover .fa-heart{
@@ -390,7 +388,7 @@ body > .row ~ .row {
 }
 
 .ui-droppable-hover{
-  color: $lavender-grey;
+  color: #79ec6a;
 }
 
 .outbox-footer{
@@ -405,3 +403,6 @@ body > .row ~ .row {
   right: 50px;
 
 }
+
+
+

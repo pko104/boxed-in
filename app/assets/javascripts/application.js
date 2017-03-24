@@ -18,34 +18,6 @@
 
 $( document ).ready(function() {
 
-
-// $('#bounce').mouseenter( function(){
-//   $('#bounce').removeClass('rollIn').addClass('bounce').css("webkit-animation-delay", "0s");
-// });
-
-// $( "#bounce").mouseleave(function() {
-//   $(this).removeClass('bounce')
-// });
-
-// $( "#rubberband").mouseleave(function() {
-//   $(this).removeClass('bounce')
-// });
-
-// $( "#swivel").mouseleave(function() {
-//   $(this).removeClass('bounce')
-// });
-
-// $('#rubberband').mouseenter( function(){
-//   $('#rubberband').removeClass('rollIn').addClass('bounce').css("webkit-animation-delay", "0s");
-// });
-
-// $('#swivel').mouseenter( function(){
-//   $('#swivel').removeClass('rollIn').addClass('bounce').css("webkit-animation-delay", "0s");
-// });
-
-
-
-
 $('.item').draggable({revert: true});
 
 $('.cart').droppable({
@@ -54,15 +26,22 @@ $('.cart').droppable({
       var price = $(ui.draggable).find('.product-price').html();
       var title = $(ui.draggable).find('.product-title').html();
 
+
+
       $("<li>" + title + " - " + price  + "</li>").appendTo('#outbox');
 
       var total_price = parseFloat(price.replace('$','')) + parseFloat( $('#outbox .total').html());
 
       $('#outbox .total').html( total_price.toFixed(2) );
-
+  },
+  over: function(event, ui){
+    $(ui.draggable).find('.center').css("color", "#79ec6a");
+  },
+  out: function (event, ui) {
+    $(ui.draggable).find('.center').css("color", "#9d9d9d");
   }
-
 });
+
 
 
 
