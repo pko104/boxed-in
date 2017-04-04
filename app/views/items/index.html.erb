@@ -96,7 +96,7 @@
     </div>
 
 
-    <div class='products'>
+    <div class='products products-right'>
         <ul>
             <li id="prod1" class='item animated fadeInUp animate1' ontouchstart="this.classList.toggle('hover');">
               <div class='flipper'>
@@ -302,7 +302,36 @@
 </div>
 
 <div class='row green'>
-    <h1 class='title-right'>Hex Buttons</h1>
+    <h1 class='title-right'>AJAX sorting
+        <div>
+            <button type="button" class="sort-button">Sort By</button>
+            <select class ='select-type'>
+                <option value="Food">Food</option>
+                <option value="Supplies">Supplies</option>
+                <option value="Price">Price</option>
+                <option value="Price">Alphabetical</option>
+            </select>
+        </div>
+    </h1>
+
+
+
+    <div class='products padder'>
+        <ul>
+            <%@items.each do |t|%>
+            <li id="prod1" class='item animated fadeInUp animate1'>
+              <div class='front'>
+                <img src="<%=t.image_url%>">
+                <div class='text'>
+                    <span class="product-title"><%=t.name%></span>
+                    <span class="product-type"><%=t.type_of_item%></span>
+                    <span class="product-price"><%=t.price%></span>
+                </div>
+            </li>
+            <%end%>
+        </ul>
+    </div>
+
 </div>
 
 <h1>

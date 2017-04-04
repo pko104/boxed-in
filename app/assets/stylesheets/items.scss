@@ -259,8 +259,11 @@ body > .row ~ .row {
 .products {
   width: 650px;
   float: left;
-  left: 30%;
+  left: 23%;
   display: table;
+}
+
+.products-right{
   position: relative;
 }
 
@@ -335,7 +338,7 @@ body > .row ~ .row {
 }
 
 .fa-shopping-cart:hover{
-  color: #79ec6a;
+  color: $boxed-color;
 }
 
 .back:hover .fa-heart, .back.hover .fa-heart{
@@ -388,7 +391,7 @@ body > .row ~ .row {
 }
 
 .ui-droppable-hover{
-  color: #79ec6a;
+  color: $lavender-grey;
 }
 
 .outbox-footer{
@@ -404,5 +407,25 @@ body > .row ~ .row {
 
 }
 
+.padder{
+  padding: 0px 100px;
+}
 
+.sort-button{
+  height: 30px;
+  width: 75px;
+  border-radius: 5px;
+  background: white;
+  color: $boxed-color;
+  border-color: #eee;
+}
+
+.sort-button:hover{
+  background: $boxed-color;
+  color: white;
+}
+
+.select-type{
+  height: 30px
+}
 

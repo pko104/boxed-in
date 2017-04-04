@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<%=form_for @item do |f|%>
+  <fieldset>
+     <div class="event-field">
+     <%= f.label :name, "Name"%>
+     <%= f.text_field :name%>
+     </div>
+
+     <div class="event-field">
+     <%= f.label :price, "Price"%>
+     <%= f.text_field :price%>
+     </div>
+
+     <div class="event-field">
+     <%= f.label :type_of_item, "Type"%>
+     <%= f.text_field :type_of_item%>
+     </div>
+
+     <div class="event-field">
+     <%= f.label :image_url, "Image URL"%>
+     <%= f.text_field :image_url%>
+     </div>
+
+      <button type="submit" value="send">Submit</button>
+
+  </fieldset>
+<%end%>
+
+
+
+</body>
+</html>

@@ -31,14 +31,14 @@ $('.cart').droppable({
       $("<li>" + title + " - " + price  + "</li>").appendTo('#outbox');
 
       var total_price = parseFloat(price.replace('$','')) + parseFloat( $('#outbox .total').html());
-
+      $('.center').css("color", "#9d9d9d");
       $('#outbox .total').html( total_price.toFixed(2) );
   },
   over: function(event, ui){
-    $(ui.draggable).find('.center').css("color", "#79ec6a");
+    $(ui.draggable).find('.center').css("color", "#06b8a4");
   },
   out: function (event, ui) {
-    $(ui.draggable).find('.center').css("color", "#9d9d9d");
+    $('.center').css("color", "#9d9d9d");
   }
 });
 
