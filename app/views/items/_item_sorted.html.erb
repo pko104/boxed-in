@@ -1,0 +1,16 @@
+<%if @items%>
+    <ul>
+        <%@items.each do |t|%>
+        <li id="prod1" class='sorted animated fadeInUp animate1'>
+
+            <img src="<%=t.image_url%>">
+            <div class='text'>
+                <span class="product-title"><%=t.name%></span>
+                <span class="product-type"><%=t.type_of_item%></span>
+                <span class="product-price"><%=t.price%></span>
+            </div>
+
+        </li>
+        <%end%>
+    </ul>
+<%end%>

@@ -43,10 +43,33 @@ $('.cart').droppable({
 });
 
 
+  $('.sort-button').click( function(e){
 
+    e.preventDefault();
+
+    var sort_type = $('select option:selected').val();
+
+    $.ajax({
+        url: '/items/sort_type.json',
+        data: {sort_type: sort_type},
+        dataType: 'html',
+        method: 'POST'
+    }).
+    success(function(data) {
+      ajaxSort();
+    });
+
+  });
+
+
+  function ajaxSort(e) {
+    $.ajax({
+        type: "GET",
+        url: "/items/item_sorted"
+    });
+  };
 
 });
-
 
 
 

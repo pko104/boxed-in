@@ -187,7 +187,7 @@ body > .row ~ .row {
     transform: rotateY(180deg);
   }
 
-.flip-container, .front, .back {
+.flip-container, .front, .back{
   width: 100px;
   height: 100px;
   float: left;
@@ -313,7 +313,7 @@ body > .row ~ .row {
 }
 
 
-.products .front, .products .back{
+.products .front, .products .back, {
   backface-visibility: hidden;
   position: absolute;
   width: 200px;
@@ -408,12 +408,14 @@ body > .row ~ .row {
 }
 
 .padder{
-  padding: 0px 100px;
+  padding: 0px 0px;
+  position: relative;
+  left: 100px;
 }
 
 .sort-button{
   height: 30px;
-  width: 75px;
+  width: 100px;
   border-radius: 5px;
   background: white;
   color: $boxed-color;
@@ -426,6 +428,23 @@ body > .row ~ .row {
 }
 
 .select-type{
-  height: 30px
+  height: 30px;
+  width: 100px;
+  text-align: center;
 }
 
+.row .button_to{
+  margin: 0;
+  width: 100px;
+}
+
+.sorted{
+  width: 200px;
+  min-height: 300px;
+  padding: 0px;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 3px 0px #888;
+  border-radius: 5%;
+  background: #eee;
+}
