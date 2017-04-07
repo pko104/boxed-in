@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-
+<html lang="en">
   <head>
 
+
+    <title>snabbt.js</title>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.1.1/randomColor.min.js"></script>
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
@@ -45,15 +47,7 @@
       }
     </style>
   </head>
-
-
-
-
-<html>
-
-
-
-  <body>
+  <body onload="init()">
     <div id="container">
       <div id="surface">
       </div>
@@ -70,36 +64,9 @@
     </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
-
-
-<%=form_for @item do |f|%>
-  <fieldset>
-     <div class="event-field">
-     <%= f.label :name, "Name"%>
-     <%= f.text_field :name%>
-     </div>
-
-     <div class="event-field">
-     <%= f.label :price, "Price"%>
-     <%= f.text_field :price%>
-     </div>
-
-     <div class="event-field">
-     <%= f.label :type_of_item, "Type"%>
-     <%= f.text_field :type_of_item%>
-     </div>
-
-     <div class="event-field">
-     <%= f.label :image_url, "Image URL"%>
-     <%= f.text_field :image_url%>
-     </div>
-
-      <button type="submit" value="send">Submit</button>
-
-  </fieldset>
-<%end%>
-
-
-
-</body>
+    <script src="snabbt.min.js"></script>
+    <script src="cards.js"></script>
+  </body>
 </html>
+
+

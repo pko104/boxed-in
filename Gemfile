@@ -7,7 +7,9 @@ source 'http://rubygems.org'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
-
+gem 'requirejs-rails'
+gem 'commonjs'
+gem 'amd'
 gem 'pry'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
