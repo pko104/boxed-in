@@ -11,7 +11,14 @@ body{
   margin: 0px;
   color: #9d9d9d;
   font-family: "Kaushan Script", cursive;
+  transform: translateZ(1000px);
+  -webkit-transform: translateZ(1000px);
 }
+
+body, html {
+  height: 100%;
+}
+
 
 #logo{
   display: block;
@@ -447,4 +454,39 @@ body > .row ~ .row {
   box-shadow: 3px 3px 3px 0px #888;
   border-radius: 5%;
   background: #eee;
+}
+
+
+#container {
+  width: 100%;
+  height: 80%;
+  margin: auto;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+#surface {
+  width: 100%;
+  height: 80%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+.card {
+  position: absolute;
+  border-radius: 10%;
+  /* Fix jagged edges in firefox */
+  outline: 1px solid transparent;
+}
+#toolbar {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+
+.make-opaque{
+  opacity: .3;
+}
+
+.make-selected{
+  opacity: 1;
 }

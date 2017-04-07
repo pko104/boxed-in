@@ -58,6 +58,8 @@ function createCard(container, index) {
   card.className = 'card';
   card.style.background = COLORS[index % COLORS.length];
 
+  // card.innerHTML = '<img style="width:100%" src="https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(50000):fill(white)/dcmzfk78s4reh.cloudfront.net/1470353104132.jpg" alt="Chewy">';
+
   container.appendChild(card);
   return card;
 }
@@ -97,7 +99,7 @@ function build_formation(positions) {
       position: positions[i].position,
       rotation: positions[i].rotation,
       easing: 'ease',
-      delay: i * 50
+      delay: i * 75
     });
   }
 }
@@ -114,10 +116,20 @@ function setMode(mode) {
   current_mode = mode;
 }
 
-function rotateContainer() {
+function rotateContainer(x,y,z) {
+
+  var rotation_coord;
+
+  if(x){
+    rotation_coord = [x,y,z];
+  }
+  else{
+    rotation_coord = [0,0,0];
+  }
+
   var container = document.getElementById('surface');
   snabbt(container, {
-    fromRotation: [0, 0, 0],
+    fromRotation: rotation_coord,
     rotation: [0, 2 * Math.PI, 0],
     duration: 10000,
     perspective: 2000,
@@ -241,8 +253,9 @@ function cylinder_positions() {
 function init() {
   updateSizes();
   Deck.reset();
-  setMode(PILE);
+  setMode(CYLINDER);
   rotateContainer();
+  onClickcard();
 
   // Initialize fast click
   FastClick.attach(document.body);
@@ -254,19 +267,40 @@ function init() {
     'wall_button': WALL,
     'cylinder_button': CYLINDER
   };
+}
 
-  var click_handler = function(key) {
-    document.getElementById('pile_button').className = '';
-    document.getElementById('house_button').className = '';
-    document.getElementById('wall_button').className = '';
-    document.getElementById('cylinder_button').className = '';
-    document.getElementById(key).className = 'button-primary';
-    setMode(buttons[key]);
-  };
+function onClickcard(){
+  var cardClicks = Array.from(document.getElementsByClassName('card'));
 
-  Object.keys(buttons).forEach(function(key) {
-    document.getElementById(key).addEventListener('click', click_handler.bind(null, key));
+  cardClicks.forEach(function(ele){
+
+    var state = 1;
+    // var current_position;
+    // var pos_array;
+
+    ele.onclick = function(){
+      // var container = document.getElementById('surface');
+
+      // if(state == 1){
+
+        cardClicks.forEach(function(card){
+          card.className = 'card make-opaque';
+        });
+
+        ele.className
+        ele.className += 'card make-selected';
+        // current_position = container.style.transform.split(' ');
+
+        // pos_array = (current_position[9] + current_position[11]).split(',');
+        // // pos_array[0] =
+        // // pos_array[1] =
+
+        // snabbt(container, 'stop');
+
+    }
+
   });
+
 }
 
 init();
