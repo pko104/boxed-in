@@ -279,7 +279,7 @@ function onClickcard(){
     // var pos_array;
 
     ele.onclick = function(){
-      // var container = document.getElementById('surface');
+      var container = document.getElementById('surface');
 
       // if(state == 1){
 
