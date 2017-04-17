@@ -99,7 +99,7 @@ function build_formation(positions) {
       position: positions[i].position,
       rotation: positions[i].rotation,
       easing: 'ease',
-      delay: i * 75
+      delay: i * 50
     });
   }
 }
@@ -116,22 +116,22 @@ function setMode(mode) {
   current_mode = mode;
 }
 
-function rotateContainer(x,y,z) {
+function rotateContainer(y) {
 
-  var rotation_coord;
-
-  if(x){
-    rotation_coord = [x,y,z];
+  var rotationArray;
+  if (y !== undefined){
+    y = Math.abs(y);
+    rotationArray = [0,y,0];
   }
   else{
-    rotation_coord = [0,0,0];
+    rotationArray = [0, 0, 0];
   }
 
   var container = document.getElementById('surface');
   snabbt(container, {
-    fromRotation: rotation_coord,
+    fromRotation: rotationArray,
     rotation: [0, 2 * Math.PI, 0],
-    duration: 10000,
+    duration: 20000,
     perspective: 2000,
     complete: function() {
       rotateContainer();
@@ -275,28 +275,48 @@ function onClickcard(){
   cardClicks.forEach(function(ele){
 
     var state = 1;
-    // var current_position;
-    // var pos_array;
+    var current_position;
+    var pos_array;
+    var yAngle;
 
-    ele.onclick = function(){
+
+    ele.onclick = function(e){
       var container = document.getElementById('surface');
 
-      // if(state == 1){
+
+      cardClicks.forEach(function(card){
+        card.className = 'card make-opaque';
+      });
+
+
+      ele.className += 'card make-selected';
+
+      if(state == 1){
+        current_position = container.style.transform.split(' ');
+
+        console.log(current_position)
+
+        pos_array = (current_position[9] + current_position[11]).split(',');
+
+        //calculating Radians
+        var a = parseFloat(current_position[11]);
+        var b = parseFloat(current_position[3]);
+
+        yAngle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+
+        snabbt(container, 'stop')
+      }
+      else if (state == 2){
 
         cardClicks.forEach(function(card){
-          card.className = 'card make-opaque';
+          card.className = 'card make-selected';
         });
 
-        ele.className
-        ele.className += 'card make-selected';
-        // current_position = container.style.transform.split(' ');
-
-        // pos_array = (current_position[9] + current_position[11]).split(',');
-        // // pos_array[0] =
-        // // pos_array[1] =
-
-        // snabbt(container, 'stop');
-
+console.log(yAngle)
+        rotateContainer(yAngle * Math.PI / 180);
+        state = 0;
+      }
+      state+=1;
     }
 
   });
