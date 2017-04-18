@@ -23,7 +23,7 @@ function updateSizes() {
   var container = document.getElementById('container');
   WIDTH = container.clientWidth;
   HEIGHT = container.clientHeight;
-  CARD_WIDTH = WIDTH * 0.05;
+  CARD_WIDTH = WIDTH * 0.07;
   CARD_HEIGHT = HEIGHT * 0.15;
   TILTED_CARD_HEIGHT = Math.sin(PYTH_ANGLE) * CARD_HEIGHT + 2;
   TILTED_CARD_WIDTH = Math.cos(PYTH_ANGLE) * CARD_HEIGHT;
@@ -171,19 +171,22 @@ function onClickcard(){
 
     ele.onclick = function(e){
       var container = document.getElementById('surface');
+      var popup_img = document.getElementById('popupImg');
 
+      ele.className += 'card make-selected';
+
+      var card_chosen = document.getElementsByClassName('make-selected')[0];
+      var img_chosen = card_chosen.getElementsByTagName('img')[0];
 
       cardClicks.forEach(function(card){
         card.className = 'card make-opaque';
+        popup_img.src = img_chosen.src
       });
 
       ele.className += 'card make-selected';
 
       if(state == 1){
         current_position = container.style.transform.split(' ');
-
-        console.log(current_position)
-
         pos_array = (current_position[9] + current_position[11]).split(',');
 
         //calculating Radians

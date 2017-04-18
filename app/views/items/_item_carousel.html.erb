@@ -1,7 +1,7 @@
 <%if @items%>
     <%@items.each do |t|%>
         <div class="card">
-            <img style="width:80%" src="<%=t.image_url%>">
+            <img class="spin-image" style="width:100%;transform: scaleX(-1);" src="<%=t.image_url%>">
         </div>
     <%end%>
 <%end%>
