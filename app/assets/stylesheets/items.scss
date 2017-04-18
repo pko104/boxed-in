@@ -505,6 +505,7 @@ p {
   left: 105px;
   top:40px;
   position: relative;
+  visibility: hidden;
 }
 
 #container{
@@ -516,4 +517,8 @@ p {
   width: 100%;
   top: -25px;
   position: relative;
+}
+
+.zero-display{
+  display: none;
 }
