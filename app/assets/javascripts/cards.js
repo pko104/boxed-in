@@ -23,8 +23,8 @@ function updateSizes() {
   var container = document.getElementById('container');
   WIDTH = container.clientWidth;
   HEIGHT = container.clientHeight;
-  CARD_WIDTH = WIDTH * 0.07;
-  CARD_HEIGHT = HEIGHT * 0.15;
+  CARD_WIDTH = WIDTH * 0.09;
+  CARD_HEIGHT = HEIGHT * 0.19;
   TILTED_CARD_HEIGHT = Math.sin(PYTH_ANGLE) * CARD_HEIGHT + 2;
   TILTED_CARD_WIDTH = Math.cos(PYTH_ANGLE) * CARD_HEIGHT;
   PYRAMID_WIDTH = TILTED_CARD_WIDTH * 2 + CARD_SPACING * 2;
