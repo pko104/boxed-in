@@ -2,6 +2,9 @@
     <%@items.each do |t|%>
         <div class="card">
             <img class="spin-image" style="width:100%;transform: scaleX(-1);" src="<%=t.image_url%>">
+            <span class="product-title zero-display"><%=t.name%></span>
+            <span class="product-type zero-display"><%=t.type_of_item%></span>
+            <span class="product-price zero-display"><%=t.price%></span>
         </div>
     <%end%>
 <%end%>

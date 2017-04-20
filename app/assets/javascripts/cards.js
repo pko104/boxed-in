@@ -189,6 +189,10 @@ function onClickcard(){
 
         ele.className += ' make-selected';
 
+        $('.first').html( $(this).children('.product-title').html() )
+        $('.second ').html( $(this).children('.product-type').html() )
+        $('.third').html( $(this).children('.product-price').html() )
+
         //calculating Radians
         current_position = container.style.transform.split(' ');
         pos_array = (current_position[9] + current_position[11]).split(',');

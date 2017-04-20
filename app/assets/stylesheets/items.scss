@@ -437,6 +437,7 @@ body > .row ~ .row {
 .select-type{
   height: 30px;
   width: 100px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -521,4 +522,9 @@ p {
 
 .zero-display{
   display: none;
+}
+
+.card-holder .text {
+  padding-left: 15px;
+  padding-right: 15px;
 }
