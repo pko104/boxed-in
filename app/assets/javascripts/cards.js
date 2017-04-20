@@ -176,13 +176,6 @@ function onClickcard(){
       ele.className += ' make-selected';
       var card_chosen = document.getElementsByClassName('make-selected')[0];
 
-      if (ele.className == 'card make-selected'){
-        state = 1
-      }
-      else{
-        state = 2
-      }
-
       if(state == 1){
 
         cardClicks.forEach(function(card){
@@ -218,7 +211,9 @@ function onClickcard(){
         });
 
         rotateContainer(yAngle * Math.PI / 180);
+        state = 0
       }
+      state+=1
     }
 
   });
