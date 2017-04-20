@@ -56,7 +56,7 @@ $('.cart').droppable({
         method: 'POST'
     }).
     success(function(data) {
-      ajaxSort();
+      ajaxSort(data);
     });
 
   });
@@ -65,7 +65,8 @@ $('.cart').droppable({
   function ajaxSort(e) {
     $.ajax({
         type: "GET",
-        url: "/items/item_sorted"
+        url: "/items/item_sorted",
+        data: {sort_type: e}
     });
   };
 

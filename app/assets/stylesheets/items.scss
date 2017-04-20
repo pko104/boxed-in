@@ -10,7 +10,6 @@ $lavender-grey: #e7e9ec;
 body{
   margin: 0px;
   color: #9d9d9d;
-  font-family: "Kaushan Script", cursive;
   transform: translateZ(1000px);
   -webkit-transform: translateZ(1000px);
 }
@@ -27,11 +26,10 @@ body, html {
   top: -150px;
 }
 
-body > .row{
-  height: 150px;
-}
+
 
 body > .row ~ .row {
+  margin: auto;
   height: auto;
 }
 
@@ -139,6 +137,7 @@ body > .row ~ .row {
 }
 
 .row{
+  margin: 0;
   min-height: 200px;
   overflow: hidden;
   border-bottom: 4px solid $lavender-grey;
@@ -512,6 +511,7 @@ p {
 #container{
   position: relative;
   top: 80px;
+  left: 120px;
 }
 
 #popupImg{

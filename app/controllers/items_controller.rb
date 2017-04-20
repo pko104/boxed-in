@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
 
 skip_before_action :verify_authenticity_token
+require 'open-uri'
+
 
 def index
   @items = Item.all()
@@ -21,8 +23,17 @@ def create
 end
 
 def item_sorted
-  # @choice = params[:sort_type]
-  @items = Item.where(type_of_item: 'Food')
+
+  @choice = params[:sort_type].gsub! /"/, ''
+
+  if @choice == 'Food' || @choice == 'Supplies'
+    @items = Item.where(type_of_item:@choice)
+  elsif @choice == 'Price'
+    @items = Item.order(price: :desc)
+  else
+    @items = Item.order(name: :asc)
+  end
+
 
   respond_to do |format|
     format.js
@@ -35,6 +46,7 @@ end
 def sort_type
    @choice = params[:sort_type]
 
+
   if @choice
     render :json => @choice.to_json
 
@@ -46,7 +58,7 @@ end
 private
 
 def item_params
-  params.require(:item).permit(:name,:price,:type_of_item,:image_url)
+  params.require(:item).permit(:name,:price,:type_of_item,:image_url,:sort_type)
 end
 
 
