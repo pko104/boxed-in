@@ -176,19 +176,17 @@ function onClickcard(){
       ele.className += ' make-selected';
 
       var card_chosen = document.getElementsByClassName('make-selected')[0];
-      var img_chosen = card_chosen.getElementsByTagName('img')[0];
-
 
       if(state == 1){
 
         cardClicks.forEach(function(card){
           card.className = 'card make-opaque';
-          popup_img.src = img_chosen.src;
           $('.card-holder').css({opacity: 0.0, visibility: 'visible'}).animate({opacity:1}, 100 );
         });
 
         ele.className += ' make-selected';
 
+        popup_img.src = $(this).find('img').attr('src');
         $('.first').html( $(this).children('.product-title').html() )
         $('.second ').html( $(this).children('.product-type').html() )
         $('.third').html( $(this).children('.product-price').html() )
@@ -209,7 +207,6 @@ function onClickcard(){
         cardClicks.forEach(function(card){
           card.className = 'card';
           $('.card-holder').css({opacity: 1.0, visibility: 'hidden'}).animate({opacity:0}, 100 );
-          popup_img.src = img_chosen.src
         });
 
         rotateContainer(yAngle * Math.PI / 180);
