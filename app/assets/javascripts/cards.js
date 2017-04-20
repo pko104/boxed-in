@@ -174,8 +174,14 @@ function onClickcard(){
       var popup_img = document.getElementById('popupImg');
 
       ele.className += ' make-selected';
-
       var card_chosen = document.getElementsByClassName('make-selected')[0];
+
+      if (ele.className == 'card make-selected'){
+        state = 1
+      }
+      else{
+        state = 2
+      }
 
       if(state == 1){
 
@@ -204,15 +210,15 @@ function onClickcard(){
       }
       else if (state == 2){
 
+        // if $
+
         cardClicks.forEach(function(card){
           card.className = 'card';
-          $('.card-holder').css({opacity: 1.0, visibility: 'hidden'}).animate({opacity:0}, 100 );
+          $('.card-holder').css({opacity: 0.0, visibility: 'hidden'}).animate({opacity:0}, 100 );
         });
 
         rotateContainer(yAngle * Math.PI / 180);
-        state = 0;
       }
-      state+=1;
     }
 
   });
