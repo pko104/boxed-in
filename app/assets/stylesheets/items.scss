@@ -263,7 +263,7 @@ body > .row ~ .row {
 }
 
 .products {
-  width: 650px;
+  width: 60%;
   float: left;
   left: 23%;
   display: table;
@@ -285,7 +285,6 @@ body > .row ~ .row {
 .products li {
   list-style-type: none;
   min-height: 300px;
-  width: 30%;
   margin: 10px 10px;
   box-sizing: border-box;
   float: left;
