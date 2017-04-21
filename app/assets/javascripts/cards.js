@@ -4,8 +4,8 @@
 $( document ).ready(function() {
 'use strict';
 
-var CARD_HEIGHT = 100;
-var CARD_WIDTH = 60;
+var CARD_HEIGHT = 300;
+var CARD_WIDTH = 200;
 var CARD_COUNT = 40;
 
 var WIDTH = 800;
@@ -24,7 +24,7 @@ function updateSizes() {
   WIDTH = container.clientWidth;
   HEIGHT = container.clientHeight;
   CARD_WIDTH = WIDTH * 0.09;
-  CARD_HEIGHT = HEIGHT * 0.19;
+  CARD_HEIGHT = HEIGHT * 0.18;
   TILTED_CARD_HEIGHT = Math.sin(PYTH_ANGLE) * CARD_HEIGHT + 2;
   TILTED_CARD_WIDTH = Math.cos(PYTH_ANGLE) * CARD_HEIGHT;
   PYRAMID_WIDTH = TILTED_CARD_WIDTH * 2 + CARD_SPACING * 2;
@@ -119,7 +119,7 @@ function rotateContainer(y) {
   snabbt(container, {
     fromRotation: rotationArray,
     rotation: [0, 2 * Math.PI, 0],
-    duration: 20000,
+    duration: 10000,
     perspective: 2000,
     complete: function() {
       rotateContainer();
