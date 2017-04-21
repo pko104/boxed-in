@@ -119,7 +119,7 @@ function rotateContainer(y) {
   snabbt(container, {
     fromRotation: rotationArray,
     rotation: [0, 2 * Math.PI, 0],
-    duration: 10000,
+    duration: 20000,
     perspective: 2000,
     complete: function() {
       rotateContainer();
